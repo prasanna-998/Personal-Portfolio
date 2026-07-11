@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prasanna Behera's professional portfolio. Skilled Frontend Web Developer experienced in HTML, CSS, JavaScript, Python, and MySQL.">
+    <title>Prasanna Behera | Frontend Developer Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <span class="gradient-text">&lt;Prasanna</span>.Dev/&gt;
+            </a>
+
+            <!-- Mobile Nav Toggle -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme">
+                    <!-- Light Mode Icon (Sun) -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Dark Mode Icon (Moon) -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home / Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-gradients">
+            <div class="gradient-sphere blob-1"></div>
+            <div class="gradient-sphere blob-2"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Welcome to my space</span>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text text-glow">Prasanna</span><br>
+                    <span class="typewriter-container">
+                        a <span class="typewriter-text" id="typewriter">Frontend Developer</span><span class="cursor">|</span>
+                    </span>
+                </h1>
+                <p class="hero-description">
+                    I build responsive websites, write Python backend integrations, and construct data-driven databases. Passionate about coding and crafting digital interfaces that solve real problems.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/prasanna-998" target="_blank" rel="noopener" class="social-icon-link" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-frame">
+                    <img src="images/profile picture.jpeg" alt="Prasanna Behera Portrait" class="hero-profile-img">
+                </div>
+                <div class="hero-floating-badge badge-1">
+                    <div class="badge-icon">💻</div>
+                    <div class="badge-text">Web Dev</div>
+                </div>
+                <div class="hero-floating-badge badge-2">
+                    <div class="badge-icon">🐍</div>
+                    <div class="badge-text">Python / SQL</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" aria-label="Scroll down to About section">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-animate">
+        <div class="container">
+            <h2 class="section-title"><span class="gradient-text">About Me</span></h2>
+            <div class="about-grid">
+                <div class="about-info-panel">
+                    <h3 class="about-subtitle">Motivated Developer based in Bengaluru</h3>
+                    <p class="about-text">
+                        I am a passionate and motivated web developer with a strong foundation in modern web development technologies. I specialize in building responsive frontend layouts with HTML5, CSS3, and JavaScript, while having solid capabilities in Python backend systems and MySQL database design.
+                    </p>
+                    <p class="about-text">
+                        Currently living in Hegganahalli, Bengaluru, I am looking forward to launching my career in software development, building clean web applications, and contributing to open-source systems.
+                    </p>
+                    
+                    <!-- Callout Resume Box -->
+                    <div class="resume-callout-card">
+                        <div class="resume-card-content">
+                            <h4>Download CV Resume</h4>
+                            <p>Get access to my complete educational and project history (PDF format).</p>
+                        </div>
+                        <a href="resume.pdf" download="Prasanna_Behera_Resume.pdf" class="btn btn-primary btn-download" id="resume-download-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Education & Tabs Panel -->
+                <div class="about-tabs-container">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="education">Education</button>
+                        <button class="tab-btn" data-tab="experience">Experience</button>
+                    </div>
+                    
+                    <div class="tab-body">
+                        <!-- Education Tab Content -->
+                        <div class="tab-content active" id="tab-education">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <span class="timeline-date">2020 - 2024</span>
+                                    <h4 class="timeline-title">B.Tech (Computer Science & Engineering)</h4>
+                                    <p class="timeline-desc">Ajay Binay Institute of Technology, Odisha (BPUT)<br><strong>CGPA: 7.72 / 10</strong></p>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <span class="timeline-date">2018 - 2020</span>
+                                    <h4 class="timeline-title">12th Science (PCMB)</h4>
+                                    <p class="timeline-desc">Rajdhani Higher Secondary School of Science, Bhubaneswar<br><strong>Score: 63%</strong></p>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <span class="timeline-date">2018</span>
+                                    <h4 class="timeline-title">10th Standard</h4>
+                                    <p class="timeline-desc">Pegarpada Nodal High School, Kendrapada<br><strong>Score: 61%</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience Tab Content -->
+                        <div class="tab-content" id="tab-experience">
+                            <div class="experience-panel">
+                                <div class="experience-badge">FRESHER</div>
+                                <p class="experience-text">
+                                    As a recent engineering graduate, I have focused my time on coding projects, building responsive web pages, learning backend routing, and developing database queries.
+                                </p>
+                                <p class="experience-text">
+                                    I am actively seeking web development positions where I can apply my skills in HTML, CSS, JavaScript, Python, and MySQL to deliver robust software solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section-animate">
+        <div class="container">
+            <h2 class="section-title"><span class="gradient-text">Skills & Tech Stack</span></h2>
+            <p class="section-description">Here are the technologies I work with to translate ideas into smooth digital realities.</p>
+            
+            <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon html5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 8.839l.228-2.56H5.216l.685 7.68h9.324l-.297 3.328-3.037.82-3.058-.824-.194-2.18H6.5l.385 4.316 5.093 1.373 5.059-1.365.688-7.728H9.378l-.16-1.801h7.822l.16-1.802H8.847l-.16-1.8h9.903z"/></svg>
+                        </div>
+                        <span class="skill-name">HTML5</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon css3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 8.839H8.67l-.16-1.8h9.903l-.228-2.56H5.216l.685 7.68h9.52l-.297 3.328-3.037.82-3.058-.824-.194-2.18H6.5l.385 4.316 5.093 1.373 5.059-1.365.688-7.728z"/></svg>
+                        </div>
+                        <span class="skill-name">CSS3 / Responsive Grid</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon js">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.376c-.666-1.134-2.002-1.905-3.522-1.905-1.666 0-2.779.885-2.779 2.262 0 2.805 4.143 2.941 4.143 4.258 0 .454-.409.771-.999.771-.839 0-1.475-.499-1.884-1.202l-1.861 1.112c.794 1.497 2.383 2.315 3.813 2.315 2.519 0 4.085-1.293 4.085-3.359 0-3.132-4.143-3.268-4.143-4.577 0-.385.341-.658.885-.658.749 0 1.316.386 1.702 1.021l1.558-1.04zm-9.011.045c-.681-1.066-1.974-1.861-3.38-1.861-2.428 0-4.017 1.748-4.017 4.198 0 2.495 1.543 4.221 4.062 4.221 1.634 0 2.859-.976 3.427-2.088l-1.838-1.089c-.318.59-.885 1.021-1.543 1.021-.999 0-1.748-.681-1.793-1.861h5.218c.045-.295.068-.613.068-.908 0-2.451-1.521-4.221-3.727-4.221zm-1.884 1.952c.046-1.021.726-1.679 1.679-1.679.953 0 1.634.658 1.679 1.679H11.14z"/></svg>
+                        </div>
+                        <span class="skill-name">JavaScript (ES6+)</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon python-icon">
+                            <!-- Python SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M14.25.18c.9 0 1.8.09 2.7.27a7.24 7.24 0 0 1 5.31 4.77c.36 1.08.54 2.25.54 3.42v3.6c0 1.17-.18 2.34-.54 3.42a7.24 7.24 0 0 1-5.31 4.77c-.9.18-1.8.27-2.7.27h-4.5c-.9 0-1.8-.09-2.7-.27a7.24 7.24 0 0 1-5.31-4.77C1.44 14.58 1.26 13.41 1.26 12.24v-3.6c0-1.17.18-2.34.54-3.42a7.24 7.24 0 0 1 5.31-4.77c.9-.18 1.8-.27 2.7-.27h4.5zm-5.4 3.6a1.35 1.35 0 1 0 0 2.7 1.35 1.35 0 0 0 0-2.7zm6.3 12.15a1.35 1.35 0 1 0 0 2.7 1.35 1.35 0 0 0 0-2.7z"/></svg>
+                        </div>
+                        <span class="skill-name">Python Programming</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon mysql-icon">
+                            <!-- Database Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+                        </div>
+                        <span class="skill-name">MySQL Database</span>
+                        <span class="skill-percentage">82%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 82%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 6 -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon problem-icon">
+                            <!-- Troubleshooting Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        </div>
+                        <span class="skill-name">Problem Solving & Debugging</span>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section-animate">
+        <div class="container">
+            <h2 class="section-title"><span class="gradient-text">My Projects</span></h2>
+            <p class="section-description">A selection of my works showing responsive layouts, backend integration, and data analytics.</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="images/LMSproj pic.jpeg" alt="Library Management System Screenshot" class="project-img">
+                        <div class="project-overlay">
+                            <button class="btn btn-primary project-demo-btn" data-project="library">Quick Demo</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Web Application</span>
+                        <h3 class="project-title">Library Management System</h3>
+                        <p class="project-desc">A responsive platform to manage cataloged books efficiently. Supports features like adding, viewing, and searching items in real-time. Features a clean, structured CSS layout.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript (DOM)</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-link-btn demo-trigger" data-project="library">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> Live Demo
+                            </button>
+                            <a href="https://github.com/prasanna-998" target="_blank" rel="noopener" class="project-link-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="images/credit card proj pic.jpeg" alt="Credit Card Defaulter Prediction Screenshot" class="project-img">
+                        <div class="project-overlay">
+                            <button class="btn btn-primary project-demo-btn" data-project="defaulter">Quick Demo</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Machine Learning</span>
+                        <h3 class="project-title">Credit Card Defaulter Prediction</h3>
+                        <p class="project-desc">A predictive model that measures customer default risk probabilities. Developed with Python pipelines and served via an interactive web interface backed by a relational database.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Web UI</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-link-btn demo-trigger" data-project="defaulter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> Live Demo
+                            </button>
+                            <a href="https://github.com/prasanna-998" target="_blank" rel="noopener" class="project-link-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="images/RLSproj pic.jpeg" alt="Rescue Lane System Screenshot" class="project-img">
+                        <div class="project-overlay">
+                            <button class="btn btn-primary project-demo-btn" data-project="rescue">Quick Demo</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Smart Systems</span>
+                        <h3 class="project-title">Smart Rescue Lane System</h3>
+                        <p class="project-desc">A transit priority system that manages signal states for emergency vehicles. Incorporates responsive controls to trigger routing alarms and optimize emergency response rates.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS Grid</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python (Flask)</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-link-btn demo-trigger" data-project="rescue">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> Live Demo
+                            </button>
+                            <a href="https://github.com/prasanna-998" target="_blank" rel="noopener" class="project-link-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-animate">
+        <div class="container">
+            <h2 class="section-title"><span class="gradient-text">Let's Connect</span></h2>
+            <p class="section-description">Have an opportunity, project, or just want to say hello? Send a message below!</p>
+            
+            <div class="contact-wrapper">
+                <!-- Contact info panel -->
+                <div class="contact-details">
+                    <div class="contact-detail-card">
+                        <div class="detail-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div class="detail-text">
+                            <h3>Email</h3>
+                            <a href="mailto:Prasannajit212@gmail.com">Prasannajit212@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-card">
+                        <div class="detail-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        </div>
+                        <div class="detail-text">
+                            <h3>Phone</h3>
+                            <a href="tel:+918144885094">+91 8144885094</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-card">
+                        <div class="detail-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="detail-text">
+                            <h3>Location</h3>
+                            <span>Hegganahalli, Bengaluru, 560091</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form container -->
+                <div class="contact-form-container">
+                    <form id="portfolio-contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+                                <span class="input-focus-line"></span>
+                            </div>
+                            <span class="error-msg" id="name-error">Please enter your name</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-email">Your Email</label>
+                            <div class="input-wrapper">
+                                <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
+                                <span class="input-focus-line"></span>
+                            </div>
+                            <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Your Message</label>
+                            <div class="input-wrapper">
+                                <textarea id="contact-message" name="message" rows="5" placeholder="Let's build something awesome..." required></textarea>
+                                <span class="input-focus-line"></span>
+                            </div>
+                            <span class="error-msg" id="message-error">Please write your message</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit" id="form-submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-spinner"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h3>&lt;Prasanna.Dev/&gt;</h3>
+                <p>Designing modern user experiences with high performance. Built with love in 2026.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="footer-socials">
+                <a href="https://github.com/prasanna-998" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Prasanna Behera. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to top of page">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Quick Demo Interactive Modals -->
+    <div class="demo-modal" id="demo-modal" role="dialog" aria-modal="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content-wrapper">
+            <button class="modal-close-btn" id="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Injected dynamically by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

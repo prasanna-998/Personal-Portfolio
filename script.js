@@ -241,24 +241,45 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }
 
-        // Form Submission Simulation
+        // Form Submission to Email via FormSubmit API
         if (isValid) {
             submitBtn.classList.add('loading');
             submitBtn.disabled = true;
 
-            // Simulate server network latency
-            setTimeout(() => {
+            fetch("https://formsubmit.co/ajax/Prasannajit212@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: nameField.value.trim(),
+                    email: emailField.value.trim(),
+                    message: messageField.value.trim(),
+                    _subject: "New Portfolio Message from " + nameField.value.trim()
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
                 submitBtn.classList.remove('loading');
                 submitBtn.disabled = false;
                 
-                // Show Success Modal
-                openModal('success-submit', {
-                    name: nameField.value.trim()
-                });
-
-                // Reset form
-                contactForm.reset();
-            }, 1800);
+                if (data.success === "true" || data.success === true) {
+                    // Show Success Modal
+                    openModal('success-submit', {
+                        name: nameField.value.trim()
+                    });
+                    contactForm.reset();
+                } else {
+                    alert("Something went wrong. Please try again.");
+                }
+            })
+            .catch(error => {
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+                console.error("Error submitting form:", error);
+                alert("Network error. Please try again.");
+            });
         }
     });
 

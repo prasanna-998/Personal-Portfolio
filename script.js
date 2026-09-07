@@ -435,6 +435,111 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 break;
 
+            case 'ecommerce':
+                contentHtml = `
+                    <h3 class="modal-project-title">AI E-Commerce Item Panel Demo</h3>
+                    <div class="ecommerce-demo" style="display: flex; flex-direction: column; gap: 20px;">
+                        <p>Simulate shopping cart additions and dynamic cost recalculations.</p>
+                        
+                        <div class="ecommerce-item-card" style="display: flex; align-items: center; justify-content: space-between; background: var(--color-border); padding: 15px; border-radius: var(--border-radius-md);">
+                            <div>
+                                <strong>AI Smart Recommendations Package</strong>
+                                <div style="color: var(--color-secondary); font-size: 0.9rem;">$120.00</div>
+                            </div>
+                            <div class="cart-controls" style="display: flex; align-items: center; gap: 12px;">
+                                <button class="cart-btn" onclick="adjustItem(0, -1)" style="width: 32px; height: 32px; border-radius: 50%; cursor: pointer;">-</button>
+                                <span class="cart-count" id="cart-item-count-0" style="font-weight: 700;">1</span>
+                                <button class="cart-btn" onclick="adjustItem(0, 1)" style="width: 32px; height: 32px; border-radius: 50%; cursor: pointer;">+</button>
+                            </div>
+                        </div>
+
+                        <div class="ecommerce-item-card" style="display: flex; align-items: center; justify-content: space-between; background: var(--color-border); padding: 15px; border-radius: var(--border-radius-md);">
+                            <div>
+                                <strong>Node.js & MongoDB Backend Module</strong>
+                                <div style="color: var(--color-secondary); font-size: 0.9rem;">$80.00</div>
+                            </div>
+                            <div class="cart-controls" style="display: flex; align-items: center; gap: 12px;">
+                                <button class="cart-btn" onclick="adjustItem(1, -1)" style="width: 32px; height: 32px; border-radius: 50%; cursor: pointer;">-</button>
+                                <span class="cart-count" id="cart-item-count-1" style="font-weight: 700;">0</span>
+                                <button class="cart-btn" onclick="adjustItem(1, 1)" style="width: 32px; height: 32px; border-radius: 50%; cursor: pointer;">+</button>
+                            </div>
+                        </div>
+
+                        <div class="ecommerce-summary" style="border-top: 1px solid var(--color-border); padding-top: 15px; display: flex; justify-content: space-between; font-weight: 700; font-size: 1.15rem;">
+                            <span>Subtotal:</span>
+                            <span id="ecommerce-subtotal">$120.00</span>
+                        </div>
+                        
+                        <button class="btn btn-primary" id="demo-checkout-btn" style="width: 100%;">Proceed to Mock Checkout</button>
+                    </div>
+                `;
+                break;
+
+            case 'weather':
+                contentHtml = `
+                    <h3 class="modal-project-title">Skyflow Weather App Live Demo</h3>
+                    <div class="weather-demo" style="display: flex; flex-direction: column; gap: 15px;">
+                        <p>Search a city to simulate live weather forecasts fetching from the Weather API.</p>
+                        <div class="weather-input-row" style="display: flex; gap: 10px;">
+                            <input type="text" id="demo-weather-city" placeholder="e.g., London, Tokyo, Paris, Delhi" value="Bengaluru" style="flex: 1; padding: 10px 14px; border-radius: var(--border-radius-sm); background-color: var(--color-border); border: 1px solid var(--color-border); color: var(--color-text-primary); outline: none;">
+                            <button class="btn btn-primary" id="demo-weather-btn">Search</button>
+                        </div>
+                        <div id="weather-demo-loader" style="display: none; text-align: center; padding: 20px;">
+                            <span class="btn-spinner" style="display: inline-block; border-color: rgba(99,102,241,0.2); border-top-color: var(--color-primary); width:30px; height:30px;"></span>
+                        </div>
+                        <div id="weather-demo-result" class="weather-result-card" style="background: rgba(99, 102, 241, 0.05); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px;">
+                            <h4 id="weather-city-name">Bengaluru, IN</h4>
+                            <div class="weather-temp" id="weather-temp" style="font-size: 3rem; font-weight: 800;">26°C</div>
+                            <div class="weather-condition" id="weather-desc">Partly Cloudy</div>
+                            <div class="weather-details-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); width: 100%; gap: 10px; margin-top: 10px;">
+                                <div class="weather-detail-item" style="background: var(--color-border); padding: 10px; border-radius: var(--border-radius-sm);">
+                                    <strong>Humidity</strong>
+                                    <div id="weather-humidity">58%</div>
+                                </div>
+                                <div class="weather-detail-item" style="background: var(--color-border); padding: 10px; border-radius: var(--border-radius-sm);">
+                                    <strong>Wind Speed</strong>
+                                    <div id="weather-wind">14 km/h</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                break;
+
+            case 'kanban':
+                contentHtml = `
+                    <h3 class="modal-project-title">Velo Kanban Interactive Manager</h3>
+                    <div class="kanban-demo" style="display: flex; flex-direction: column; gap: 15px;">
+                        <p>Track project tasks and move them between workflow states.</p>
+                        <div class="kanban-columns" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                            <div class="kanban-col" style="background: var(--color-border); border-radius: var(--border-radius-md); padding: 15px; min-height: 200px;">
+                                <h4 style="margin-bottom: 12px; font-size: 0.9rem; text-transform: uppercase; color: var(--color-text-secondary);">To Do</h4>
+                                <div class="kanban-list" id="kanban-todo-list" style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div class="kanban-item" id="task-1" style="background: var(--color-bg-surface-elevated); border: 1px solid var(--color-border-hover); padding: 12px; border-radius: var(--border-radius-sm); font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                                        <span>Build AI E-Commerce backend</span>
+                                        <button class="kanban-move-btn" onclick="moveTask('task-1', 'done')" style="background: none; border: none; color: var(--color-primary); cursor: pointer; font-weight: 700;">&rarr;</button>
+                                    </div>
+                                    <div class="kanban-item" id="task-2" style="background: var(--color-bg-surface-elevated); border: 1px solid var(--color-border-hover); padding: 12px; border-radius: var(--border-radius-sm); font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                                        <span>Optimize Weather API caching</span>
+                                        <button class="kanban-move-btn" onclick="moveTask('task-2', 'done')" style="background: none; border: none; color: var(--color-primary); cursor: pointer; font-weight: 700;">&rarr;</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="kanban-col" style="background: var(--color-border); border-radius: var(--border-radius-md); padding: 15px; min-height: 200px;">
+                                <h4 style="margin-bottom: 12px; font-size: 0.9rem; text-transform: uppercase; color: var(--color-text-secondary);">Completed</h4>
+                                <div class="kanban-list" id="kanban-done-list" style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div class="kanban-item" id="task-3" style="background: var(--color-bg-surface-elevated); border: 1px solid var(--color-border-hover); padding: 12px; border-radius: var(--border-radius-sm); font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                                        <span>Deploy Portfolio on GitHub</span>
+                                        <button class="kanban-move-btn" onclick="moveTask('task-3', 'todo')" style="background: none; border: none; color: var(--color-primary); cursor: pointer; font-weight: 700;">&larr;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                break;
+
             case 'success-submit':
                 contentHtml = `
                     <div style="text-align: center; padding: 20px 0;">
@@ -458,6 +563,10 @@ document.addEventListener('DOMContentLoaded', () => {
             bindDefaulterDemo();
         } else if (projectType === 'rescue') {
             bindRescueDemo();
+        } else if (projectType === 'weather') {
+            bindWeatherDemo();
+        } else if (projectType === 'ecommerce') {
+            bindEcommerceDemo();
         } else if (projectType === 'success-submit') {
             document.getElementById('success-close-btn').addEventListener('click', closeModal);
         }
@@ -640,4 +749,106 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 4500);
         });
     }
+
+    // Weather Demo Event Handler Binding
+    function bindWeatherDemo() {
+        const cityInput = document.getElementById('demo-weather-city');
+        const searchBtn = document.getElementById('demo-weather-btn');
+        const loader = document.getElementById('weather-demo-loader');
+        const resultCard = document.getElementById('weather-demo-result');
+
+        // City database mockup
+        const weatherMocks = {
+            london: { temp: '16°C', desc: 'Overcast Drizzle', hum: '82%', wind: '19 km/h', code: 'GB' },
+            tokyo: { temp: '28°C', desc: 'Sunny Sky', hum: '45%', wind: '8 km/h', code: 'JP' },
+            paris: { temp: '21°C', desc: 'Light Showers', hum: '70%', wind: '14 km/h', code: 'FR' },
+            newyork: { temp: '24°C', desc: 'Partly Cloudy', hum: '64%', wind: '12 km/h', code: 'US' },
+            bengaluru: { temp: '26°C', desc: 'Partly Cloudy', hum: '58%', wind: '14 km/h', code: 'IN' },
+            delhi: { temp: '38°C', desc: 'Haze & Hot', hum: '30%', wind: '6 km/h', code: 'IN' }
+        };
+
+        searchBtn.addEventListener('click', () => {
+            const cityName = cityInput.value.trim().toLowerCase().replace(/\s+/g, '');
+            if (cityName === '') return;
+
+            resultCard.style.display = 'none';
+            loader.style.display = 'block';
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+                resultCard.style.display = 'flex';
+
+                const matched = weatherMocks[cityName] || {
+                    temp: Math.floor(Math.random() * 20 + 15) + '°C',
+                    desc: 'Clear Sky',
+                    hum: Math.floor(Math.random() * 40 + 40) + '%',
+                    wind: Math.floor(Math.random() * 15 + 5) + ' km/h',
+                    code: 'LOC'
+                };
+
+                document.getElementById('weather-city-name').textContent = cityInput.value.trim() + `, ${matched.code}`;
+                document.getElementById('weather-temp').textContent = matched.temp;
+                document.getElementById('weather-desc').textContent = matched.desc;
+                document.getElementById('weather-humidity').textContent = matched.hum;
+                document.getElementById('weather-wind').textContent = matched.wind;
+            }, 800);
+        });
+
+        // Trigger search on enter
+        cityInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') searchBtn.click();
+        });
+    }
+
+    // E-Commerce cart arrays and adjustments
+    let cartQuantities = [1, 0];
+    const prices = [120.00, 80.00];
+
+    window.adjustItem = function(index, amount) {
+        let count = cartQuantities[index] + amount;
+        if (count < 0) count = 0;
+        cartQuantities[index] = count;
+        
+        const countEl = document.getElementById(`cart-item-count-${index}`);
+        if (countEl) countEl.textContent = count;
+        
+        // Update subtotal
+        const subtotal = (cartQuantities[0] * prices[0]) + (cartQuantities[1] * prices[1]);
+        const subtotalEl = document.getElementById('ecommerce-subtotal');
+        if (subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+    };
+
+    function bindEcommerceDemo() {
+        cartQuantities = [1, 0]; // reset on open
+        const checkoutBtn = document.getElementById('demo-checkout-btn');
+        if (checkoutBtn) {
+            checkoutBtn.addEventListener('click', () => {
+                const subtotal = (cartQuantities[0] * prices[0]) + (cartQuantities[1] * prices[1]);
+                if (subtotal === 0) {
+                    alert('Your shopping cart is empty!');
+                    return;
+                }
+                alert(`Demo Successful! Simulated checkout for $${subtotal.toFixed(2)}.`);
+            });
+        }
+    }
+
+    // Kanban movements
+    window.moveTask = function(taskId, targetCol) {
+        const taskEl = document.getElementById(taskId);
+        if (!taskEl) return;
+
+        const buttonEl = taskEl.querySelector('.kanban-move-btn');
+        
+        if (targetCol === 'done') {
+            document.getElementById('kanban-done-list').appendChild(taskEl);
+            buttonEl.innerHTML = '&larr;';
+            buttonEl.setAttribute('onclick', `moveTask('${taskId}', 'todo')`);
+        } else {
+            document.getElementById('kanban-todo-list').appendChild(taskEl);
+            buttonEl.innerHTML = '&rarr;';
+            buttonEl.setAttribute('onclick', `moveTask('${taskId}', 'done')`);
+        }
+    };
 });
+

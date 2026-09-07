@@ -256,7 +256,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     name: nameField.value.trim(),
                     email: emailField.value.trim(),
                     message: messageField.value.trim(),
-                    _subject: "New Portfolio Message from " + nameField.value.trim()
+                    _subject: "New Portfolio Message from " + nameField.value.trim(),
+                    _captcha: "false",
+                    _template: "table"
                 })
             })
             .then(response => response.json())
